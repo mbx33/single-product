@@ -77,3 +77,8 @@ select {
 		scroll-behavior: auto !important;
 	}
 }
+
+
+.color {
+	color: hsl(240, 100%, 50%, .2);
+}
