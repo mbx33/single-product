@@ -1,9 +1,11 @@
-import React from 'react'
+import styled from 'styled-components';
 
 const Navbar = () => {
-  return (
-    <div>Navbar</div>
-  )
-}
+	return <NavWrapper>Navbar</NavWrapper>;
+};
 
-export default Navbar
+export default Navbar;
+
+const NavWrapper = styled.nav`
+	height: 7vh;
+`;

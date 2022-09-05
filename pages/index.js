@@ -7,7 +7,6 @@ export default function Home() {
 		<MainContainer>
 			<Layout>
 				<Wrapper>
-					<h1>Hello World</h1>
 					<Product />
 				</Wrapper>
 			</Layout>
@@ -20,7 +19,7 @@ const MainContainer = styled.div`
 `;
 
 const Wrapper = styled.div`
-	background-color: limegreen;
 	color: #fff;
+	font-size: 3rem;
 	text-align: center;
 `;
