@@ -7,6 +7,7 @@ const stripePromise = loadStripe(publishableKey);
 const Product = () => {
 	const [item, setItem] = useState({
 		name: 'Estee Lauder',
+		productId: 'ps1900',
 		description: 'This is the best night Serum',
 		available: 11,
 		qty: 0,
@@ -41,16 +42,14 @@ const Product = () => {
 
 	const handleMinus = () => {
 		setItem((prevState) => {
-			if (prevState.qty > 0) {
-				return {
-					...prevState,
-					qty: prevState.qty - 1,
-					available: prevState.available + 1,
-				};
-			}
 			if (prevState.qty === 0) {
 				return { ...prevState };
 			}
+			return {
+				...prevState,
+				qty: prevState.qty - 1,
+				available: prevState.available + 1,
+			};
 		});
 	};
 

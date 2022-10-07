@@ -7,7 +7,7 @@ export default function Layout({ children }) {
 	return (
 		<>
 			<Head>
-				<title>Our Product</title>
+				<title>RRT Best Product</title>
 				<meta name="Our Product" content="Product page" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>

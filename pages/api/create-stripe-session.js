@@ -6,8 +6,25 @@ const redirectURL =
 		? 'http://localhost:3000'
 		: 'http://localhost:3000';
 
+let price;
+function getPrice(id) {
+	switch (id) {
+		case 'ps2234':
+			price = 150;
+			break;
+		case 'ps1900':
+			price = 300;
+			break;
+		default:
+			price = 1000;
+			break;
+	}
+}
+
 async function CreateStripeSession(req, res) {
-	const { name, description, available, qty } = req.body.item;
+	const { name, description, available, qty, productId } = req.body.item;
+
+	getPrice(productId);
 
 	console.log(name, description, qty, 'values from deconstruct');
 
@@ -18,7 +35,7 @@ async function CreateStripeSession(req, res) {
 				// images:
 				name,
 			},
-			unit_amount: 150 * 100,
+			unit_amount: price * 100,
 		},
 		description,
 		quantity: qty,
